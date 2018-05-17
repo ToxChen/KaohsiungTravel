@@ -1,0 +1,51 @@
+//hide-text
+@mixin hide-text {
+	text-indent: 110%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+//size
+@mixin size($width,$height) {
+	width: $width;
+	height: $height;
+}
+
+//poa-center
+@mixin poa-center {
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+//clearfix
+@mixin clearfix {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+//gird
+@mixin pad {
+	@media (max-width: 768px) {
+		@content
+	}
+}
+
+@mixin phone {
+	@media (max-width: 767px) {
+		@content
+	}
+}
+
+@mixin iphone5 {
+	@media (max-width: 320px) {
+		@content
+	}
+}

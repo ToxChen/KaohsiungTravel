@@ -1,0 +1,240 @@
+*
+	box-sizing: border-box
+
+body
+	font-family: 'Noto Sans TC', sans-serif
+	color: #222
+	font-size: 18px
+	background-color: #f7f7f7
+
+/*BANNER*/
+.banner
+	height: 380px
+	background-image: url(../img/bg.jpg)
+	background-size: cover
+	background-position: top
+	text-align: center
+	position: relative
+	
+	h1
+		color: #fff
+		font-size: 40px
+		padding-top: 90px
+		letter-spacing: 5px
+		font-weight: 300
+
+	select
+		width: 100%
+		max-width: 452px
+		margin-top: 95px
+		padding: 15px
+		font-size: 18px
+		font-weight: 300
+		border: 3px solid #fff
+		border-radius: 3px
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		background: url(../img/icons_down.png) no-repeat 96% center
+		background-color: rgba(255,255,255,0.7)
+
+		@include phone
+			margin-top: 50px
+	
+
+	.hotdistrict
+		width: 100%
+		max-width: 800px
+		background: #FFFFFF
+		padding: 20px 26px
+		box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20)
+		border-radius: 5px
+		position: absolute
+		bottom: -98px
+		left: 50%
+		transform: translateX(-50%)
+		text-align: left
+
+		 
+		.hot li
+			width: 21%
+			float: left
+			margin: 15px 2%
+			text-align: center
+
+			a
+				width: 100%
+				display: inline-block
+				padding: 10px 0
+				text-decoration: none
+				color: #fff
+				border-radius: 5px
+
+			.hot1
+				background-color: #8A82CC
+			.hot2
+				background-color: #FFA782
+			.hot3
+				background-color: #F5D105
+			.hot4
+				background-color: #559AC8
+
+			@include phone
+				width: 46%
+
+
+/*LINE*/
+.line
+	max-width: 1260px
+	border-bottom: 1px dashed #559AC8
+	margin: 133px auto 0
+	position: relative
+
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+
+/*CONTENT*/
+.content
+	max-width: 1260px
+	margin: 0 auto 75px
+	padding: 0 15px
+	@include clearfix
+
+	.title
+		font-size: 36px
+		color: #8A82CC
+		text-align: center
+		margin: 75px 0 25px
+
+	.list 
+		li
+			width: 50%
+			float: left
+			padding: 0 8px
+			margin-bottom: 36px
+
+			@include phone
+				width: 100%
+				float: none
+				padding: 0
+
+			.listbox
+				box-shadow: 0 1px 3px 0 rgba(0,0,0,0.20)
+
+				.imgbox
+					height: 155px
+					overflow: hidden
+					position: relative
+					background-size: cover
+					background-repeat: no-repeat
+					background-position: center
+
+					img
+						width: 100%
+						position: absolute
+						top: -100px
+						z-index: -1
+
+					.name
+						position: absolute
+						bottom: 14px
+						left: 22px
+						color: #fff
+						font-size: 24px
+						font-weight: 300
+						text-shadow: 2px 2px 5px rgba(0,0,0,0.35)
+
+					.zone
+						position: absolute
+						right: 24px
+						bottom: 11px
+						font-size: 18px
+						font-weight: 100
+						color: #fff
+						text-shadow: 2px 2px 2px rgba(0,0,0,0.35)
+
+				.infobox
+					padding: 15px 20px
+					position: relative
+					background-color: #fff
+
+					p
+						font-size: 18px
+						margin-bottom: 15px
+						white-space: nowrap
+						text-overflow: ellipsis
+						overflow: hidden
+
+						&:last-of-type
+							margin-bottom: 0
+
+					img
+						vertical-align: top
+
+					.icon-time
+						margin-right: 8px
+					.icon-add
+						margin-right: 10px
+					.icon-tel
+						margin-right: 14px
+					.icon-tag
+						margin-right: 8px
+
+					span
+						position: absolute
+						right: 24px
+						bottom: 19px
+						font-size: 18px
+
+/*MAP*/
+#map 
+	width: 100%
+	height: 450px
+	margin-bottom: 91px
+
+/*FOOTER*/
+footer
+	width: 100%
+	background-color: #559AC8
+	padding: 24px 0
+	font-size: 14px
+	text-align: center
+	font-weight: 100
+	letter-spacing: 1px
+	position: fixed
+	bottom: 0
+	z-index: 2
+
+	.sub-title
+		color: #fff
+		margin-bottom: 15px
+
+	.source
+		color: #FFD366
+
+/*GOTOTTOP*/
+.gotoTop
+	width: 30px
+	height: 30px
+	position: fixed
+	right: 40px
+	cursor: pointer
+	z-index: 3
+	bottom: -100px
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.35)
+	-webkit-transition: bottom .4s linear
+	transition: bottom .4s linear
+	-webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1)
+	animation-timing-function: cubic-bezier(0, 0, 0.2, 1)
+	img
+		width: 100%
+		height: 100%
+	&.active
+	  bottom: 15px
+	  -webkit-transition: bottom .4s linear
+	  transition: bottom .4s linear
+	  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1)
+	  animation-timing-function: cubic-bezier(0, 0, 0.2, 1)
